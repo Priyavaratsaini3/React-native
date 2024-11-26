@@ -6,7 +6,7 @@ function Apppro(): JSX.Element {
     const isDarkMode = useColorScheme() === 'dark';
     return(
     <View style={styles.container}>
-        <Text style={isDarkMode ? styles.whiteText : styles.darkText}>
+        <Text style={isDarkMode ? styles.darkText : styles.whiteText}>
             Hello World!
             </Text>
     </View>
