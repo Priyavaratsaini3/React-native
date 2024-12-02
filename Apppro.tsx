@@ -1,30 +1,15 @@
-import React from "react";
+import { View, Text, SafeAreaView, ScrollView } from 'react-native'
+import React from 'react'
+import FlatCards from './components/FlatCards'
 
-import {View, Text, StyleSheet, useColorScheme} from 'react-native';
-
-function Apppro(): JSX.Element {
-    const isDarkMode = useColorScheme() === 'dark';
-    return(
-    <View style={styles.container}>
-        <Text style={isDarkMode ? styles.darkText : styles.whiteText}>
-            Hello World!
-            </Text>
-    </View>
-);
+const Apppro = () => {
+  return (
+    <SafeAreaView>
+        <ScrollView> 
+        <FlatCards />
+        </ScrollView>
+     </SafeAreaView>
+  )
 }
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    whiteText: { 
-        color: '#FFFFFF',
-    },
-    darkText: {
-        color: '#000000',
-    }, 
 
-});
-
-export default Apppro; 
+export default Apppro
